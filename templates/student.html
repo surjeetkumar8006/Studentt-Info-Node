@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{%NAME%}'s Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .profile-card {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 16px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .profile-card h1 {
+      font-size: 2.4rem;
+      color: #1e88e5;
+      margin-bottom: 10px;
+    }
+
+    .profile-card p {
+      font-size: 1.1rem;
+      color: #555;
+      margin: 10px 0;
+    }
+
+    .profile-card p strong {
+      color: #333;
+    }
+
+    .profile-card a {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 20px;
+      background-color: #1e88e5;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .profile-card a:hover {
+      background-color: #1565c0;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .profile-card {
+        padding: 30px 20px;
+      }
+
+      .profile-card h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <h1>{%NAME%}</h1>
+    <p><strong>Course:</strong> {%COURSE%}</p>
+    <p><strong>Year:</strong> {%YEAR%}</p>
+    <p><strong>Email:</strong> {%EMAIL%}</p>
+    <a href="/">⬅ Back to All Students</a>
+  </div>
+</body>
+</html>
