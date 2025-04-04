@@ -15,7 +15,7 @@ const server = http.createServer((req, res) => {
 
   // Static CSS
   if (pathname === "/style.css") {
-    const css = fs.readFileSync(`${__dirname}/public/style.css`);
+    const css = fs.readFileSync(`./public/style.css`);
     res.writeHead(200, { "Content-Type": "text/css" });
     return res.end(css);
   }
@@ -53,7 +53,7 @@ const server = http.createServer((req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 8000;
-server.listen(8000, "127.0.0.1", () => {
+const PORT = process.env.PORT || 10000;
+server.listen(10000, "127.0.0.1", () => {
   console.log("Server running at ",PORT);
 });
